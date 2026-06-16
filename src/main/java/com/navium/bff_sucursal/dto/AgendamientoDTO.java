@@ -12,7 +12,7 @@ public class AgendamientoDTO {
     private String patenteCamion;
     private String rutChofer;
     private String tipoOperacion;
-    private String idContenedor;
+    private Long contenedorId;
     private LocalDateTime horaInicio;
     private LocalDateTime bloqueFin;
     private String estadoAgendamiento;
