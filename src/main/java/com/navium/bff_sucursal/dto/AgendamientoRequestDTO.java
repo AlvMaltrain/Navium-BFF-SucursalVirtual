@@ -10,5 +10,5 @@ public class AgendamientoRequestDTO {
     private String rutChofer;
     private String horaInicio;
     private String tipoOperacion;
-    private String idContenedor;
+    private Long contenedorId;
 }
