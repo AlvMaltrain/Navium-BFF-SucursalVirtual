@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.navium.bff_sucursal.dto.AndenDTO;
 
-@FeignClient(name = "ms-andenes", url = "http://localhost:8084/api/v0")
+@FeignClient(name = "ms-andenes", url = "${ANDENES_URL:http://localhost:8084/api/v0}")
 public interface AndenClient {
 
     @GetMapping("/andenes")

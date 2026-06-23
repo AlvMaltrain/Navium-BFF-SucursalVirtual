@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.navium.bff_sucursal.dto.AgendamientoDTO;
 import com.navium.bff_sucursal.dto.AgendamientoRequestDTO;
 
-@FeignClient(name = "ms-agendamiento", url = "http://localhost:8081/api/agendamientos")
+@FeignClient(name = "ms-agendamiento", url = "${AGENDAMIENTO_URL:http://localhost:8081/api/agendamientos}")
 public interface AgendamientoClient {
 
     @GetMapping

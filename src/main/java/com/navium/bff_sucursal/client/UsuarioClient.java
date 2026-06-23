@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.navium.bff_sucursal.dto.UsuarioDTO;
 
-@FeignClient(name = "ms-usuarios", url = "http://localhost:8085")
+@FeignClient(name = "ms-usuarios", url = "${USUARIOS_URL:http://localhost:8085}")
 public interface UsuarioClient {
 
     @GetMapping("/api/usuarios/{id}")
