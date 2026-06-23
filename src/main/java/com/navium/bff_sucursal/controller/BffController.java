@@ -159,10 +159,10 @@ public class BffController {
         : null;
 
     ContenedorDTO contenedor = null;
-    if (agendamiento != null && agendamiento.getIdContenedor() != null) {
+    if (agendamiento != null && agendamiento.getContenedorId() != null) {
         List<ContenedorDTO> todos = contenedorClient.obtenerTodos();
         contenedor = todos.stream()
-            .filter(c -> c.getCodigoSigla().equals(agendamiento.getIdContenedor()))
+            .filter(c -> c.getId().equals(agendamiento.getContenedorId()))
             .findFirst()
             .orElse(null);
     }

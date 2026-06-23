@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.navium.bff_sucursal.dto.ContenedorDTO;
 
-@FeignClient(name = "ms-contenedores", url = "http://localhost:8086/api/contenedores")
+@FeignClient(name = "ms-contenedores", url = "${CONTENEDORES_URL:http://localhost:8086/api/contenedores}")
 public interface ContenedorClient {
 
     @GetMapping
