@@ -9,9 +9,12 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        // Detrás del API Gateway: el CORS real lo maneja el gateway.
+        // El BFF acepta cualquier origen para no rechazar las peticiones que reenvía el gateway.
         registry.addMapping("/**")
-            .allowedOrigins("http://localhost:5173")
+            .allowedOriginPatterns("*")
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-            .allowedHeaders("*");
+            .allowedHeaders("*")
+            .allowCredentials(true);
     }
 }
